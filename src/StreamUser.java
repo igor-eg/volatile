@@ -2,12 +2,12 @@ public class StreamUser extends Thread {
 
     @Override
     public void run() {
-        int toggleSwitchOnPeriod = 3000;
+        final int TOGGLE_SWITCH_ON_PERIOD = 3000;
         try {
             while (!isInterrupted()) {
                 if (!Main.toggleSwitch) {
                     Main.toggleSwitch = true;
-                    Thread.sleep(toggleSwitchOnPeriod);
+                    Thread.sleep(TOGGLE_SWITCH_ON_PERIOD);
                     System.out.printf("%s включает тумблер!\n", getName());
                 }
             }

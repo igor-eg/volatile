@@ -2,7 +2,7 @@ public class Main {
     public static volatile boolean toggleSwitch = false;
 
     public static void main(String[] args) {
-        int gameTime = 15000;
+        final int GAME_TIME = 15000;
 
         System.out.println("Начало игры");
         StreamUser streamUser = new StreamUser();
@@ -14,7 +14,7 @@ public class Main {
         streamToy.start();
 
         try {
-            Thread.sleep(gameTime);
+            Thread.sleep(GAME_TIME);
             streamToy.interrupt();
             streamUser.interrupt();
             System.out.println("хватит мучать кошку");
