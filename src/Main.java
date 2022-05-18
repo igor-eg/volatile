@@ -1,8 +1,8 @@
 public class Main {
     public static volatile boolean toggleSwitch = false;
+    private static final int GAME_TIME = 10000;
 
     public static void main(String[] args) {
-        final int GAME_TIME = 15000;
 
         System.out.println("Начало игры");
         StreamUser streamUser = new StreamUser();
